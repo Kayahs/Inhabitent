@@ -1,0 +1,25 @@
+# Ignore all files in current folder #
+*.*
+
+# Ignore everything in "wp-admin" #
+wp-admin/*
+
+# Ignore everything in "wp-includes" #
+wp-includes/*
+
+# Ignore everything in "wp-content" except these directories. #
+wp-content/*
+!.gitignore
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+!README.md
+# Ignore everything in "plugins" except certain plugins. #
+wp-content/plugins/*
+!wp-content/plugins/inhabitent-functionality/
+!wp-content/plugins/business-hours-widget/
+# Ignore everything in "themes" except the active theme. #
+wp-content/themes/*
+!wp-content/themes/inhabitent/
+# Ignore packages #
+wp-content/themes/inhabitent/node_modules/
