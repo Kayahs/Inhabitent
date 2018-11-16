@@ -225,6 +225,32 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+/* Merriweather */
+@font-face {
+  font-family: 'Merriweather Web';
+  src: url("../../fonts/Merriweather/Merriweather-Light.ttf"); }
+
+@font-face {
+  font-family: 'Merriweather Web Italic';
+  src: url("../../fonts/Merriweather/Merriweather-LightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Merriweather Web Bold';
+  src: url("../../fonts/Merriweather/Merriweather-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Merriweather Web BoldItalic';
+  src: url("../../fonts/Merriweather/Merriweather-BoldItalic.ttf"); }
+
+/* Novocento */
+@font-face {
+  font-family: 'Novecento Sans Web';
+  src: url("../../fonts/Novecento/Novecentosanswide-Normal.ttf"); }
+
+@font-face {
+  font-family: 'Novecento Sans Web Bold';
+  src: url("../../fonts/Novecento/Novecentosanswide-DemiBold.ttf"); }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -234,14 +260,17 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: 'Merriweather Web';
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Novecento Sans Web';
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
 /* Copy */
 p {
@@ -348,6 +377,11 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -418,24 +452,11 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/* Links */
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 /* Menus */
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: left; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -670,3 +691,132 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home-hero {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url(../../images/home-hero.jpg) no-repeat top;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), #969696 url(../../images/home-hero.jpg) no-repeat top;
+  background-size: cover,cover;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%; }
+
+.home .shop-embed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center; }
+
+.home .product-type-wrapper {
+  border: 1px solid #e1e1e1;
+  border-top-width: 5px;
+  -ms-flex: 0 1 23.5%;
+  -webkit-box-flex: 0;
+          flex: 0 1 23.5%;
+  max-width: 23.5%;
+  padding: .75rem; }
+  .home .product-type-wrapper:hover {
+    border-color: #d99054; }
+  .home .product-type-wrapper img {
+    height: 70px;
+    width: 70px; }
+
+.home h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 3.75rem;
+  text-align: center; }
+
+.button {
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 14.4px;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .button:hover {
+    background-color: #19625d;
+    color: #fff; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* Links */
+a {
+  color: #FFF; }
+  a:visited {
+    color: #FFF; }
+  a:hover, a:focus, a:active {
+    color: #f0e4d1; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+.site-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #c1c1c1;
+  padding: 0.5rem 0;
+  position: fixed;
+  -webkit-transition: top 0.5s linear;
+  transition: top 0.5s linear;
+  width: 100%;
+  z-index: 3; }
+  .site-header.reverse-header {
+    background-color: transparent;
+    border-bottom: 0;
+    position: absolute;
+    text-shadow: 1px 1px 2px #323232; }
+    .site-header.reverse-header h1 {
+      background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
+      background-size: 50px 33px; }
+    .site-header.reverse-header a {
+      text-transform: uppercase; }
+  .site-header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .site-header .container .main-navigation {
+      font-family: 'Novecento Sans Web';
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .site-header .container .main-navigation li {
+        padding-right: 1.5rem; }
+    .site-header .container .header-search fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0; }
+      .site-header .container .header-search fieldset label {
+        display: none; }
+  .site-header h1 {
+    background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+    background-size: 50px 33px;
+    height: 33px;
+    margin: 0;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 50px; }

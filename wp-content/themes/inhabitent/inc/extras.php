@@ -31,9 +31,3 @@ function my_custom_login_logo() {
    </style>';
 }
 add_action('login_head', 'my_custom_login_logo');
-
-function my_custom_header() {
-  echo '';
-}
-
-add_action('wp_head', 'my_custom_header');

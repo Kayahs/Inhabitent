@@ -13,7 +13,10 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			This is a test
-			<?php echo CFS()->get('price'); ?>
+			<?php echo CFS()->get('price'); 
+				$img_url = CFS()->get('product_image');
+				echo "<img src=\"$img_url\">";
+			?>
 
 			<?php the_post_navigation(); ?>
 

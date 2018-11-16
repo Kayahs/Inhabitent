@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+  /* Links */
+
+a {
+  color: #FFF;
+
+  &:visited {
+    color: #FFF;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: #f0e4d1;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+  .site-header {
+    background-color: hsla(0,0%,100%,.85);
+    border-bottom: 1px solid #c1c1c1;
+    padding: 0.5rem 0;
+    position: fixed;
+    transition: top 0.5s linear;
+    width: 100%;
+    z-index: 3;
+    &.reverse-header {
+      background-color: transparent;
+      border-bottom: 0;
+      position: absolute;
+      text-shadow: 1px 1px 2px #323232;
+      h1 {
+        background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
+        background-size: 50px 33px;
+      }
+      a {
+        text-transform: uppercase;
+      }
+
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .main-navigation {
+        font-family: 'Novecento Sans Web';
+        li {
+          padding-right: 1.5rem;
+        }
+        display: flex;
+      }
+      .header-search {
+        fieldset {
+          border: 0;
+          padding: 0;
+          margin: 0;
+          label {
+            display: none;
+          }
+        }
+      }
+    }
+    h1 {
+      background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+      background-size: 50px 33px;
+      height: 33px;
+      margin: 0;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 50px;
+    }
+  }

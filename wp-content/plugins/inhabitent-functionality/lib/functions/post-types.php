@@ -4,36 +4,64 @@
  *
  */
  //register custom post type to work with
-function wpmudev_create_product_post_type() {
-	// set up labels
-	$labels = array(
- 		'name' => 'Products',
-    	'singular_name' => 'Product',
-    	'add_new' => 'Add New Product',
-    	'add_new_item' => 'Add New Product',
-    	'edit_item' => 'Edit Product',
-    	'new_item' => 'New Product',
-    	'all_items' => 'All Products',
-    	'view_item' => 'View Product',
-    	'search_items' => 'Search Products',
-    	'not_found' =>  'No Products Found',
-    	'not_found_in_trash' => 'No Products found in Trash', 
-    	'parent_item_colon' => '',
-    	'menu_name' => 'Products',
+function create_labels_post_types($label) {
+  // set up labels
+  $labels = array(
+    'name' => $label . 's',
+      'singular_name' => $label,
+      'add_new' => 'Add New ' . $label,
+      'add_new_item' => 'Add New ' . $label,
+      'edit_item' => 'Edit ' . $label,
+      'new_item' => 'New ' . $label,
+      'all_items' => 'All ' . $label . 's',
+      'view_item' => 'View ' . $label,
+      'search_items' => 'Search ' . $label . 's',
+      'not_found' =>  'No ' . $label . 's Found',
+      'not_found_in_trash' => 'No ' . $label . 's found in Trash', 
+      'parent_item_colon' => '',
+      'menu_name' => $label . 's',
     );
-    //register post type
-	register_post_type( 'product', array(
-		'labels' => $labels,
-		'has_archive' => true,
- 		'public' => true,
-		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
-		'taxonomies' => array( 'post_tag', 'category' ),	
-		'exclude_from_search' => false,
-		'capability_type' => 'post',
-		'rewrite' => array( 'slug' => 'products' ),
-		)
-	);
+    return $labels;
 }
-add_action( 'init', 'wpmudev_create_product_post_type' );
+function create_post_types() {
+  
+    //register post type
+  register_post_type( 'product', array(
+    'labels' => create_labels_post_types("Product"),
+    'has_archive' => true,
+    'public' => true,
+    'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+    'taxonomies' => array( 'post_tag', 'category' ),  
+    'exclude_from_search' => false,
+    'capability_type' => 'post',
+    'rewrite' => array( 'slug' => 'products' ),
+    )
+  );
+
+  register_post_type( 'adventure', array(
+    'labels' => create_labels_post_types("Adventure"),
+    'has_archive' => true,
+    'public' => true,
+    'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+    'taxonomies' => array( 'post_tag', 'category' ),  
+    'exclude_from_search' => false,
+    'capability_type' => 'post',
+    'rewrite' => array( 'slug' => 'products' ),
+    )
+  );
+
+  register_post_type( 'journal', array(
+    'labels' => create_labels_post_types("Journal"),
+    'has_archive' => true,
+    'public' => true,
+    'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+    'taxonomies' => array( 'post_tag', 'category' ),  
+    'exclude_from_search' => false,
+    'capability_type' => 'post',
+    'rewrite' => array( 'slug' => 'products' ),
+    )
+  );
+}
+add_action( 'init', 'create_post_types' );
 
 // Add your custom post types here...
