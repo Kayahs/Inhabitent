@@ -31,3 +31,21 @@ function my_custom_login_logo() {
    </style>';
 }
 add_action('login_head', 'my_custom_login_logo');
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function footer_widget_init() {
+
+  register_sidebar( array(
+    'name'          => 'Footer Widget Area',
+    'id'            => 'footer',/*
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="rounded">',
+    'after_title'   => '</h2>',*/
+  ) );
+
+}
+add_action( 'widgets_init', 'footer_widget_init' );

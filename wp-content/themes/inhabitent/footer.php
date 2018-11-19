@@ -10,37 +10,20 @@
       </div><!-- #content -->
 
       <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="site-info">
-          <div class="contact-info">
-            <div class="contact-title">
-              CONTACT INFO
+        <div class="footer-container container">
+          <div class="site-info">
+            <?php dynamic_sidebar( 'footer' ); ?>
+            <div class="footer-block">
+              <div class="logo">
+                <a href="<?php echo home_url('/'); ?>" rel="home">
+                  <img src="<?php echo get_template_directory_uri()."/images/logos/inhabitent-logo-text.svg"?>" alt="Inhabitent logo">
+                </a>
+              </div>
             </div>
-            <div class="email">
-              <i class="fa "></i>
-              info@inhabitent.com
-            </div>
-            <div class="phone">
-              <i class="fa "></i>
-              778-456-7891
-            </div>
-            <div class="social-icons">
-              <i class="fa "></i>
-              <i class="fa "></i>
-              <i class="fa "></i>
-            </div>
+          </div><!-- .site-info -->
+          <div class="copyright">
+            <?php printf( __('Copyright &copy; 2019 Inhabitent')); ?>
           </div>
-          <div class="business-hours">
-            <div class="business-hours-title">
-              BUSINESS HOURS
-            </div>
-            <div><strong>Monday-Friday:</strong> 9am to 5pm</div>
-            <div><strong>Saturday:</strong> 10am to 2pm</div>
-            <div><strong>Sunday:</strong> Closed</div>
-          </div>
-        </div><!-- .site-info -->
-        <div class="logo">
-        </div>
-        <div class="copyright">
         </div>
       </footer><!-- #colophon -->
     </div><!-- #page -->

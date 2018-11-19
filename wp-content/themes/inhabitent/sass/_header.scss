@@ -4,11 +4,8 @@
   /* Links */
 
 a {
-  color: #FFF;
+  color: #248a83;
 
-  &:visited {
-    color: #FFF;
-  }
   &:hover,
   &:focus,
   &:active {
@@ -40,7 +37,11 @@ a {
         background-size: 50px 33px;
       }
       a {
+        color: #FFF;
         text-transform: uppercase;
+        &:visited {
+          color: #FFF;
+        }
       }
 
     }

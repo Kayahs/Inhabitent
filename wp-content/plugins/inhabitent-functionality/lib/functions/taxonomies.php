@@ -29,22 +29,6 @@ function register_taxonomies() {
 		'query_var' => true,
 		'show_admin_column' => true
 	) );
-
-	// register taxonomy
-	register_taxonomy( 'journalcat', 'journal', array(
-		'hierarchical' => true,
-		'labels' => create_labels("Journal"),
-		'query_var' => true,
-		'show_admin_column' => true
-	) );
-
-	// register taxonomy
-	register_taxonomy( 'adventurecat', 'adventure', array(
-		'hierarchical' => true,
-		'labels' => create_labels("Adventure"),
-		'query_var' => true,
-		'show_admin_column' => true
-	) );
 }
 add_action( 'init', 'register_taxonomies' );
 ?>
