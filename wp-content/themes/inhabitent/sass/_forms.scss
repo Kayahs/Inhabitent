@@ -60,3 +60,40 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+.contact-form {
+  p {
+    label {
+      color: #2f1339;
+      display: block;
+      font-family: Novecento Sans Web,sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+    }
+    input[type=submit] {
+      background: #248a83;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+      cursor: pointer;
+      font-family: Novecento Sans Web,sans-serif;
+      font-size: .9rem;
+      line-height: 1;
+      padding: .75rem 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: none;
+      &:hover {
+        background: #19625d;
+        color: #fff;
+      }
+    }
+  }
+  input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+    color: #666;
+    background-color: #f4f4f4;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+  }
+
+}

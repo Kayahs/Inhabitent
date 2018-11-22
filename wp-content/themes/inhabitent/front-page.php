@@ -24,7 +24,6 @@ get_header(); ?>
           foreach ( $categories as $category ) {
             $categorylink = home_url('/') . $category->taxonomy .'/'. $category->slug;
             ?>
-            <!-- DO  -->
            <div class = 'product-type-wrapper'>
                <img src = "<?php echo get_template_directory_uri()."/images/product-type-icons/$category->slug.svg"?>" alt="<?php echo $category->name ?>">
                <p><?php echo $category->description ?></p>

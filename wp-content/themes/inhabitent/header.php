@@ -21,7 +21,7 @@
     <div id="page" class="hfeed site">
       <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-      <header id="masthead" class=<?php echo is_front_page() ? '"site-header reverse-header"' : "site-header" ?> role="banner">
+      <header id="masthead" class=<?php echo (is_front_page() || is_page('about') || is_singular('adventure')) ? '"site-header reverse-header"' : "site-header" ?> role="banner">
         <div class="container">
           <div class="site-branding">
             <div class="logo">

@@ -49,3 +49,9 @@ function footer_widget_init() {
 
 }
 add_action( 'widgets_init', 'footer_widget_init' );
+
+add_filter( 'getarchives_where', function ( $where )
+{
+    $where = str_replace( "post_type = 'post'", "post_type IN ( 'journal' )", $where );
+    return $where;
+}); 

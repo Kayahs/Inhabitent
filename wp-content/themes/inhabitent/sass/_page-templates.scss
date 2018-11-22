@@ -201,14 +201,6 @@
         }
 
     }
-    // .adventure-wrapper {
-    //     // bottom: 0;
-    //     // left: 0;
-    //     // // position: absolute;
-    //     // right: 0;
-    //     // top: 0;
-    //     z-index: 1;
-    // }
     .adventure-wrapper {
         img {
             left: 50%;
@@ -218,7 +210,6 @@
             top: 75%;
             transform: translate(-50%, -75%);
             width: auto;
-            // height: auto;
             background:rgba(0,0,0,.35);
         }
         &:after {
@@ -240,7 +231,6 @@
 }
 
 .adventure-title {
-        // font-size: 3rem;
         font-family: 'Merriweather Web';
         font-weight: normal;
         margin-top: 24px;
@@ -291,6 +281,85 @@
     }
 }
 
+/* Adventure Archive Styles */
+.post-type-archive-adventure {
+  .content-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .page-title {
+    font-size: 2.4rem;
+  }
+  .adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 4.5rem;
+    .adventure-grid-item {
+      position: relative;
+      &:before {
+        content: "";
+        float: left;
+        padding-top: 100%;
+      }
+      h2 {
+        line-height: 1.25;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 4.5rem;
+        text-transform: none;
+        a {
+          font-family: 'Merriweather Web';
+          text-transform: none;
+          color: #FFF;
+          &:hover {
+            color: #f0e4d1;
+          }
+        }
+        font-family: Merriweather Web,serif;
+        font-size: 48px;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 4.5rem;
+        text-transform: none;
+      }
+      .adventure-item-wrapper {
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:after {
+          background: rgba(0,0,0,.35);
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        img {
+          left: 50%;
+          max-height: 550px;
+          max-width: none;
+          width: auto;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 1;
+        }
+        .adventure-info {
+          margin: 4.5rem 1.5rem;
+          position: absolute;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
 /* Footer Styles */
 .site-footer {
   background: url(../../images/dark-wood.png);
@@ -314,6 +383,10 @@
     display: flex;
     width: 100%;
     .footer-block {
+      i {
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+      }
       margin: 3rem 0;
       padding-right: 1.5rem;
       width: 25%;
@@ -344,12 +417,353 @@
     }
   }
 }
+/* Product Category Page Styles */
+.page-header {
+  text-align: center;
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
+.page-title, .entry-title {
+  margin-top: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  .product-grid-item {
+    border: 1px solid #e1e1e1;
+    .price {
+      float: right;
+      padding-left: .25rem;
+      background: #fff;
+    }
+    .product-info {
+      font-size: 14.4px;
+      font-size: .9rem;
+      padding: .75rem 1rem;
+      text-align: left;
+      .entry-title {
+        background: #fff;
+        display: inline;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: Merriweather Web,serif;
+        letter-spacing: 0;
+        line-height: 1.75;
+        padding-right: .25rem;
+        text-transform: none;
+        &:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          content: "...................................................";
+        }
+      }
+    }
+    .thumbnail-wrapper {
+      background-color: #e1e1e1;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      .wp-post-image {
+        left: 50%;
+        max-height: 250px;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-52%);
+        width: auto;
+      }
+    }
+  }
+}
+
+.taxonomy-description {
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+}
+/* Product Archive Styles */
+.product-cats {
+  text-align: center;
+  display: flex;
+  font-family: 'Novecento Sans Web';
+  font-size: 1.2rem;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+  li {
+    margin: 0 1.5rem;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Single Product Styles */
+/*.content-area {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1120px;
+}*/
+#page {
+  width: 100%!important;
+}
+.add-padding {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.single-product {
+  &.hentry {
+    margin: 0 0 4.5rem;
+  }
+  display: flex;
+  justify-content: space-between;
+  .product-image-wrapper, .product-content-wrapper {
+    width: 48%;
+  }
+  .entry-title {
+    color:  #d99054;
+  }
+  .entry-content {
+    .social-buttons {
+      margin: 1.5rem 0;
+      i {
+        margin-right: 10px;
+      }
+    }
+    margin-top: 0;
+    .price {
+      font-family: 'Novecento Sans Web';
+      font-size: 28.8px;
+      font-size: 1.8rem;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.black-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 14.4px;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.black-btn:hover, .black-btn:active, .black-btn:focus {
+  background: #19625d;
+  background-color: #248a83;
+  border: 1px solid #248a83;
+  box-shadow: none;
+  color: #fff;
+}
+.single-journal, .post-type-archive-journal {
+  .page-container {
+    display: flex;
+    .content-area {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      width: 75%;
+      padding-right: 5%;
+      border-right: 1px solid #e1e1e1;
+      .entry-header {
+        position: relative;
+        line-height: 0;
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+        h1 {
+          line-height: 1.25;
+          background-color: #248a83;
+          color: #FFF;
+          font-size: 2.1rem;
+          left: 0;
+          padding: 0.75rem 1.5rem;
+          position: absolute;
+          margin-top: 2.25rem;
+          max-width: 75%;
+          top: 0;
+        }
+        .entry-meta {
+          background-color: #248a83;
+          bottom: 0;
+          color: #FFF;
+          display: inline-block;
+          font-family: 'Novecento Sans Web';
+          padding: 1rem 1.5rem;
+          position: absolute;
+          right: 0;
+          text-transform: uppercase;
+        }
+      }
+      .journal-info {
+        .cat-links {
+          margin-right: 1.5rem;
+        }
+        .cat-links, .tag-links {
+          display: inline-block;
+          font-family: 'Novecento Sans Web';
+          text-transform: uppercase;
+          a {
+            color: #248a83;
+            text-decoration: none;
+            &:hover {
+              color: #2f1339;
+            }
+          }
+        }
+      }
+      .social-buttons {
+        margin: 1.5rem 0;
+      }
+    }
+    .site-footer {
+      width: 25%;
+    }
+  }
+}
+/* Comment Styles */
+.comments-area {
+  .comments-title {
+    font-size: 2.1rem;
+    margin-top: 25px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .comment-list {
+    list-style: none;
+    li {
+      border-bottom: 1px solid #e1e1e1; 
+    }
+    .comment {
+      .children {
+        list-style: none;
+      }
+      article {
+        .comment-author-avatar {
+          border-radius: 50%;
+          height: 64px;
+          margin-right: 1.5rem;
+          overflow: hidden;
+          width: 64px;
+          img {
+            height: auto;
+            max-width: 100%;
+          }
+        }
+        .reply {
+          a {
+            text-decoration: none;
+          }
+        }
+        display: flex;
+        padding-bottom: 1.5rem;
+      }
+    } 
+  }
+}
+
+/* About Page Styles */
+.about-hero {
+  background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url(../../images/about-hero.jpg) no-repeat center bottom;
+  background-size: cover, cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #FFF;
+}
+.about-container {
+  h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hentry {
+    margin: 0 0 4.5rem;
+  }
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Single Adventure Styles */
+.single-adventure {
+  .entry-title {
+    font-size: 2.4rem;
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    margin-top: 3rem;
+  }
+  .entry-meta {
+    text-transform: uppercase;
+    font-family: 'Novecento Sans Web';
+  }
+  .adventure-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Find Us Styles */
+.find-us-container {
+  .entry-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    color: #2f1339;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+  }
+  display: flex;
+  .content-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 75%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+  }
+  .site-footer {
+    width: 25%;
+  }
+}
 
 /* Sidebar Styles */
 
 .sidebar-widget-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 5%;
   .social-icons {
     display: none;
+  }
+  h2, h3 {
+    line-height: 1.25;
+    font-family: 'Novecento Sans Web';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  .widget_archive {
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+      list-style:none;
+    }
   }
 }

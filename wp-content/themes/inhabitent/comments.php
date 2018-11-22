@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * The template for displaying comments.
  *
@@ -69,7 +69,8 @@ if ( post_password_required() ) {
 		'title_reply'          => esc_html( 'Post a Comment' ),
 		'comment_notes_before' => wp_kses( '<p class="comment-notes">Want to join the discussion? Feel free to contribute!</p>', array( 'p' => array( 'class' => '' ) ) ),
 		'label_submit'         => esc_html( 'Submit' ),
-		'cancel_reply_link'    => esc_html( '[Cancel reply]' )
+		'cancel_reply_link'    => esc_html( '[Cancel reply]' ),
+    'logged_in_as' => esc_html('')
 	) ); ?>
 
 </div><!-- #comments -->

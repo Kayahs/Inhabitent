@@ -21,4 +21,5 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+  <a class = "adventure-button" href = "<?php the_permalink(); ?>">Read More</a>
 </article><!-- #post-## -->

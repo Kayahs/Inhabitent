@@ -29,7 +29,9 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+  <?php
 
+  ?>
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

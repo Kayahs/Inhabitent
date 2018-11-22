@@ -268,7 +268,7 @@ textarea {
   font-family: 'Merriweather Web';
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.75; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -453,6 +453,38 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+.contact-form p label {
+  color: #2f1339;
+  display: block;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase; }
+
+.contact-form p input[type=submit] {
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .contact-form p input[type=submit]:hover {
+    background: #19625d;
+    color: #fff; }
+
+.contact-form input[type=email], .contact-form input[type=password], .contact-form input[type=search], .contact-form input[type=text], .contact-form input[type=url], .contact-form textarea {
+  color: #666;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 0; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -952,6 +984,74 @@ object {
     background: #19625d;
     color: #FFF; }
 
+/* Adventure Archive Styles */
+.post-type-archive-adventure .content-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.post-type-archive-adventure .page-title {
+  font-size: 2.4rem; }
+
+.post-type-archive-adventure .adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 4.5rem; }
+  .post-type-archive-adventure .adventure-grid .adventure-grid-item {
+    position: relative; }
+    .post-type-archive-adventure .adventure-grid .adventure-grid-item:before {
+      content: "";
+      float: left;
+      padding-top: 100%; }
+    .post-type-archive-adventure .adventure-grid .adventure-grid-item h2 {
+      line-height: 1.25;
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 4.5rem;
+      text-transform: none;
+      font-family: Merriweather Web,serif;
+      font-size: 48px;
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 4.5rem;
+      text-transform: none; }
+      .post-type-archive-adventure .adventure-grid .adventure-grid-item h2 a {
+        font-family: 'Merriweather Web';
+        text-transform: none;
+        color: #FFF; }
+        .post-type-archive-adventure .adventure-grid .adventure-grid-item h2 a:hover {
+          color: #f0e4d1; }
+    .post-type-archive-adventure .adventure-grid .adventure-grid-item .adventure-item-wrapper {
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .post-type-archive-adventure .adventure-grid .adventure-grid-item .adventure-item-wrapper:after {
+        background: rgba(0, 0, 0, 0.35);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1; }
+      .post-type-archive-adventure .adventure-grid .adventure-grid-item .adventure-item-wrapper img {
+        left: 50%;
+        max-height: 550px;
+        max-width: none;
+        width: auto;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: 1; }
+      .post-type-archive-adventure .adventure-grid .adventure-grid-item .adventure-item-wrapper .adventure-info {
+        margin: 4.5rem 1.5rem;
+        position: absolute;
+        z-index: 2; }
+
 /* Footer Styles */
 .site-footer {
   background: url(../../images/dark-wood.png);
@@ -977,6 +1077,9 @@ object {
       margin: 3rem 0;
       padding-right: 1.5rem;
       width: 25%; }
+      .site-footer .site-info .footer-block i {
+        font-size: 1.25rem;
+        margin-right: 0.5rem; }
       .site-footer .site-info .footer-block:last-child {
         padding-right: 0;
         width: 50%; }
@@ -996,9 +1099,313 @@ object {
         .site-footer .site-info .footer-block .logo img {
           max-width: 50%; }
 
+/* Product Category Page Styles */
+.page-header {
+  text-align: center;
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  text-align: center; }
+
+.page-title, .entry-title {
+  margin-top: 0; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .product-grid .product-grid-item {
+    border: 1px solid #e1e1e1; }
+    .product-grid .product-grid-item .price {
+      float: right;
+      padding-left: .25rem;
+      background: #fff; }
+    .product-grid .product-grid-item .product-info {
+      font-size: 14.4px;
+      font-size: .9rem;
+      padding: .75rem 1rem;
+      text-align: left; }
+      .product-grid .product-grid-item .product-info .entry-title {
+        background: #fff;
+        display: inline;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: Merriweather Web,serif;
+        letter-spacing: 0;
+        line-height: 1.75;
+        padding-right: .25rem;
+        text-transform: none; }
+        .product-grid .product-grid-item .product-info .entry-title:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          content: "..................................................."; }
+    .product-grid .product-grid-item .thumbnail-wrapper {
+      background-color: #e1e1e1;
+      height: 250px;
+      overflow: hidden;
+      position: relative; }
+      .product-grid .product-grid-item .thumbnail-wrapper .wp-post-image {
+        left: 50%;
+        max-height: 250px;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -52%);
+                transform: translate(-50%, -52%);
+        width: auto; }
+
+.taxonomy-description {
+  margin: 2rem auto 3rem;
+  max-width: 800px; }
+
+/* Product Archive Styles */
+.product-cats {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Novecento Sans Web';
+  font-size: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase; }
+  .product-cats li {
+    margin: 0 1.5rem; }
+    .product-cats li a {
+      text-decoration: none; }
+
+/* Single Product Styles */
+/*.content-area {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1120px;
+}*/
+#page {
+  width: 100% !important; }
+
+.add-padding {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.single-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .single-product.hentry {
+    margin: 0 0 4.5rem; }
+  .single-product .product-image-wrapper, .single-product .product-content-wrapper {
+    width: 48%; }
+  .single-product .entry-title {
+    color: #d99054; }
+  .single-product .entry-content {
+    margin-top: 0; }
+    .single-product .entry-content .social-buttons {
+      margin: 1.5rem 0; }
+      .single-product .entry-content .social-buttons i {
+        margin-right: 10px; }
+    .single-product .entry-content .price {
+      font-family: 'Novecento Sans Web';
+      font-size: 28.8px;
+      font-size: 1.8rem;
+      margin-top: 0;
+      text-transform: uppercase; }
+
+.black-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 14.4px;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.black-btn:hover, .black-btn:active, .black-btn:focus {
+  background: #19625d;
+  background-color: #248a83;
+  border: 1px solid #248a83;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff; }
+
+.single-journal .page-container, .post-type-archive-journal .page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .single-journal .page-container .content-area, .post-type-archive-journal .page-container .content-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 75%;
+    padding-right: 5%;
+    border-right: 1px solid #e1e1e1; }
+    .single-journal .page-container .content-area .entry-header, .post-type-archive-journal .page-container .content-area .entry-header {
+      position: relative;
+      line-height: 0; }
+      .single-journal .page-container .content-area .entry-header img, .post-type-archive-journal .page-container .content-area .entry-header img {
+        height: auto;
+        max-width: 100%; }
+      .single-journal .page-container .content-area .entry-header h1, .post-type-archive-journal .page-container .content-area .entry-header h1 {
+        line-height: 1.25;
+        background-color: #248a83;
+        color: #FFF;
+        font-size: 2.1rem;
+        left: 0;
+        padding: 0.75rem 1.5rem;
+        position: absolute;
+        margin-top: 2.25rem;
+        max-width: 75%;
+        top: 0; }
+      .single-journal .page-container .content-area .entry-header .entry-meta, .post-type-archive-journal .page-container .content-area .entry-header .entry-meta {
+        background-color: #248a83;
+        bottom: 0;
+        color: #FFF;
+        display: inline-block;
+        font-family: 'Novecento Sans Web';
+        padding: 1rem 1.5rem;
+        position: absolute;
+        right: 0;
+        text-transform: uppercase; }
+    .single-journal .page-container .content-area .journal-info .cat-links, .post-type-archive-journal .page-container .content-area .journal-info .cat-links {
+      margin-right: 1.5rem; }
+    .single-journal .page-container .content-area .journal-info .cat-links, .single-journal .page-container .content-area .journal-info .tag-links, .post-type-archive-journal .page-container .content-area .journal-info .cat-links, .post-type-archive-journal .page-container .content-area .journal-info .tag-links {
+      display: inline-block;
+      font-family: 'Novecento Sans Web';
+      text-transform: uppercase; }
+      .single-journal .page-container .content-area .journal-info .cat-links a, .single-journal .page-container .content-area .journal-info .tag-links a, .post-type-archive-journal .page-container .content-area .journal-info .cat-links a, .post-type-archive-journal .page-container .content-area .journal-info .tag-links a {
+        color: #248a83;
+        text-decoration: none; }
+        .single-journal .page-container .content-area .journal-info .cat-links a:hover, .single-journal .page-container .content-area .journal-info .tag-links a:hover, .post-type-archive-journal .page-container .content-area .journal-info .cat-links a:hover, .post-type-archive-journal .page-container .content-area .journal-info .tag-links a:hover {
+          color: #2f1339; }
+    .single-journal .page-container .content-area .social-buttons, .post-type-archive-journal .page-container .content-area .social-buttons {
+      margin: 1.5rem 0; }
+  .single-journal .page-container .site-footer, .post-type-archive-journal .page-container .site-footer {
+    width: 25%; }
+
+/* Comment Styles */
+.comments-area .comments-title {
+  font-size: 2.1rem;
+  margin-top: 25px;
+  margin-left: 0;
+  padding-left: 0; }
+
+.comments-area .comment-list {
+  list-style: none; }
+  .comments-area .comment-list li {
+    border-bottom: 1px solid #e1e1e1; }
+  .comments-area .comment-list .comment .children {
+    list-style: none; }
+  .comments-area .comment-list .comment article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 1.5rem; }
+    .comments-area .comment-list .comment article .comment-author-avatar {
+      border-radius: 50%;
+      height: 64px;
+      margin-right: 1.5rem;
+      overflow: hidden;
+      width: 64px; }
+      .comments-area .comment-list .comment article .comment-author-avatar img {
+        height: auto;
+        max-width: 100%; }
+    .comments-area .comment-list .comment article .reply a {
+      text-decoration: none; }
+
+/* About Page Styles */
+.about-hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../../images/about-hero.jpg) no-repeat center bottom;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../../images/about-hero.jpg) no-repeat center bottom;
+  background-size: cover, cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  color: #FFF; }
+
+.about-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+  .about-container h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem; }
+  .about-container .hentry {
+    margin: 0 0 4.5rem; }
+
+/* Single Adventure Styles */
+.single-adventure .entry-title {
+  font-size: 2.4rem;
+  margin-bottom: .5rem;
+  line-height: 1.25;
+  margin-top: 3rem; }
+
+.single-adventure .entry-meta {
+  text-transform: uppercase;
+  font-family: 'Novecento Sans Web'; }
+
+.single-adventure .adventure-container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Find Us Styles */
+.find-us-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .find-us-container .entry-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem; }
+  .find-us-container h2 {
+    color: #2f1339;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem; }
+  .find-us-container .content-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 75%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%; }
+  .find-us-container .site-footer {
+    width: 25%; }
+
 /* Sidebar Styles */
-.sidebar-widget-area .social-icons {
-  display: none; }
+.sidebar-widget-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 5%; }
+  .sidebar-widget-area .social-icons {
+    display: none; }
+  .sidebar-widget-area h2, .sidebar-widget-area h3 {
+    line-height: 1.25;
+    font-family: 'Novecento Sans Web';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem; }
+  .sidebar-widget-area .widget_archive ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none; }
 
 /*--------------------------------------------------------------
 # Header
@@ -1017,7 +1424,7 @@ a {
   background-color: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid #c1c1c1;
   padding: 0.5rem 0;
-  position: fixed;
+  position: relative;
   -webkit-transition: top 0.5s linear;
   transition: top 0.5s linear;
   width: 100%;
@@ -1035,6 +1442,17 @@ a {
       text-transform: uppercase; }
       .site-header.reverse-header a:visited {
         color: #FFF; }
+    .site-header.reverse-header .header-search fieldset input[type='search'] {
+      color: #FFF; }
+      .site-header.reverse-header .header-search fieldset input[type='search']::-webkit-input-placeholder {
+        color: #f0e4d1;
+        opacity: 1; }
+      .site-header.reverse-header .header-search fieldset input[type='search']::-ms-input-placeholder {
+        color: #f0e4d1;
+        opacity: 1; }
+      .site-header.reverse-header .header-search fieldset input[type='search']::placeholder {
+        color: #f0e4d1;
+        opacity: 1; }
   .site-header .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1046,15 +1464,41 @@ a {
       font-family: 'Novecento Sans Web';
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      text-transform: uppercase; }
       .site-header .container .main-navigation li {
         padding-right: 1.5rem; }
+    .site-header .container .header-search .search-toggle {
+      float: left; }
     .site-header .container .header-search fieldset {
       border: 0;
       padding: 0;
       margin: 0; }
       .site-header .container .header-search fieldset label {
-        display: none; }
+        display: none;
+        float: left;
+        color: #2f1339;
+        font-family: 'Novecento Sans Web';
+        font-size: 17.6px;
+        font-size: 1.1rem;
+        margin-bottom: .5rem;
+        text-transform: uppercase; }
+        .site-header .container .header-search fieldset label.active {
+          display: block; }
+      .site-header .container .header-search fieldset input[type='search'] {
+        border: 0;
+        background: transparent;
+        font-family: 'Novecento Sans Web';
+        margin-left: .75rem;
+        padding: 0 .3rem;
+        text-transform: uppercase;
+        width: 0%;
+        -webkit-transition: width 2s; }
+        .site-header .container .header-search fieldset input[type='search'].active {
+          width: 100%;
+          -webkit-transition: width 2s; }
+        .site-header .container .header-search fieldset input[type='search']:focus {
+          outline: none; }
   .site-header h1 {
     background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
     background-size: 50px 33px;

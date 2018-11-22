@@ -54,7 +54,7 @@ function create_post_types() {
     'labels' => create_labels_post_types("Journal"),
     'has_archive' => true,
     'public' => true,
-    'supports' => array( 'title', 'author', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
+    'supports' => array( 'title', 'author','comments', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
     'taxonomies' => array( 'post_tag', 'category' ),  
     'exclude_from_search' => false,
     'capability_type' => 'post',
